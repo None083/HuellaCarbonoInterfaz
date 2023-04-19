@@ -42,7 +42,6 @@ public class HuellaCarbono extends javax.swing.JFrame {
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Url.setBackground(new java.awt.Color(239, 238, 240));
-        Url.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         Url.setForeground(new java.awt.Color(153, 153, 153));
         Url.setText("Ingresa una dirección web");
         Url.setToolTipText("");
@@ -71,8 +70,8 @@ public class HuellaCarbono extends javax.swing.JFrame {
         });
         Fondo.add(Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, 40));
 
-        Bosque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotos/output-onlinepngtools.png"))); // NOI18N
-        Bosque.setText("jLabel1");
+        Bosque.setIcon(new javax.swing.ImageIcon("C:\\Users\\FX506\\Documents\\NetBeansProjects\\HuellaCarbono\\src\\main\\resources\\fotos\\output-onlinepngtools.png")); // NOI18N
+        Bosque.setToolTipText("");
         Fondo.add(Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 800, 340));
 
         BarraSuperior.setBackground(new java.awt.Color(77, 143, 141));

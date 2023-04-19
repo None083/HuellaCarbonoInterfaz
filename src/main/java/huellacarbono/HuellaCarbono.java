@@ -4,27 +4,33 @@
  */
 package huellacarbono;
 
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Insets;
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.border.EmptyBorder;
 
 public class HuellaCarbono extends javax.swing.JFrame {
-
+    
     int xMouse;
     int yMouse;
-
+    
     public HuellaCarbono() {
         initComponents();
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         Fondo = new javax.swing.JPanel();
         Url = new javax.swing.JTextField();
-        Enviar = new javax.swing.JButton();
+        Calcular = new javax.swing.JButton();
         Bosque = new javax.swing.JLabel();
         BarraSuperior = new javax.swing.JPanel();
         Cerrar = new javax.swing.JLabel();
+        Resultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -37,11 +43,11 @@ public class HuellaCarbono extends javax.swing.JFrame {
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Url.setBackground(new java.awt.Color(239, 238, 240));
-        Url.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Url.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
         Url.setForeground(new java.awt.Color(153, 153, 153));
         Url.setText("Ingresa una dirección web");
         Url.setToolTipText("");
-        Url.setBorder(null);
+        Url.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
         Url.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 UrlMousePressed(evt);
@@ -52,22 +58,22 @@ public class HuellaCarbono extends javax.swing.JFrame {
                 UrlActionPerformed(evt);
             }
         });
-        Fondo.add(Url, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 360, 40));
+        Fondo.add(Url, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 360, 40));
 
-        Enviar.setBackground(new java.awt.Color(97, 113, 108));
-        Enviar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        Enviar.setForeground(new java.awt.Color(239, 238, 240));
-        Enviar.setText("Enviar");
-        Enviar.addActionListener(new java.awt.event.ActionListener() {
+        Calcular.setBackground(new java.awt.Color(97, 113, 108));
+        Calcular.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        Calcular.setForeground(new java.awt.Color(239, 238, 240));
+        Calcular.setText("Calcular");
+        Calcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EnviarActionPerformed(evt);
+                CalcularActionPerformed(evt);
             }
         });
-        Fondo.add(Enviar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 110, -1, 40));
+        Fondo.add(Calcular, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 150, -1, 40));
 
-        Bosque.setIcon(new javax.swing.ImageIcon("C:\\Users\\FX506\\Documents\\NetBeansProjects\\HuellaCarbono\\src\\main\\java\\imagenes\\output-onlinepngtools.png")); // NOI18N
+        Bosque.setIcon(new javax.swing.ImageIcon(getClass().getResource("/fotos/output-onlinepngtools.png"))); // NOI18N
         Bosque.setText("jLabel1");
-        Fondo.add(Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 800, 340));
+        Fondo.add(Bosque, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 800, 340));
 
         BarraSuperior.setBackground(new java.awt.Color(77, 143, 141));
         BarraSuperior.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -116,6 +122,9 @@ public class HuellaCarbono extends javax.swing.JFrame {
 
         Fondo.add(BarraSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 40));
 
+        Resultado.setEnabled(false);
+        Fondo.add(Resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 420, 260));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -124,19 +133,19 @@ public class HuellaCarbono extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Fondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Fondo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 657, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
     
     private void UrlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UrlActionPerformed
-        // TODO add your handling code here:
+        Url.setMargin(new Insets(10, 10, 10, 10));
     }//GEN-LAST:event_UrlActionPerformed
 
-    private void EnviarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnviarActionPerformed
+    private void CalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CalcularActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_EnviarActionPerformed
+    }//GEN-LAST:event_CalcularActionPerformed
 
     private void BarraSuperiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BarraSuperiorMousePressed
         xMouse = evt.getX();
@@ -211,9 +220,10 @@ public class HuellaCarbono extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel BarraSuperior;
     private javax.swing.JLabel Bosque;
+    private javax.swing.JButton Calcular;
     private javax.swing.JLabel Cerrar;
-    private javax.swing.JButton Enviar;
     private javax.swing.JPanel Fondo;
+    private javax.swing.JLabel Resultado;
     private javax.swing.JTextField Url;
     // End of variables declaration//GEN-END:variables
 }

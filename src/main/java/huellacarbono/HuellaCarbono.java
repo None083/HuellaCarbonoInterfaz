@@ -30,7 +30,6 @@ public class HuellaCarbono extends javax.swing.JFrame {
         Bosque = new javax.swing.JLabel();
         BarraSuperior = new javax.swing.JPanel();
         Cerrar = new javax.swing.JLabel();
-        Resultado = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -48,6 +47,7 @@ public class HuellaCarbono extends javax.swing.JFrame {
         Url.setText("Ingresa una dirección web");
         Url.setToolTipText("");
         Url.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
+        Url.setOpaque(true);
         Url.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 UrlMousePressed(evt);
@@ -121,9 +121,6 @@ public class HuellaCarbono extends javax.swing.JFrame {
         );
 
         Fondo.add(BarraSuperior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 40));
-
-        Resultado.setEnabled(false);
-        Fondo.add(Resultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 420, 260));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -223,7 +220,6 @@ public class HuellaCarbono extends javax.swing.JFrame {
     private javax.swing.JButton Calcular;
     private javax.swing.JLabel Cerrar;
     private javax.swing.JPanel Fondo;
-    private javax.swing.JLabel Resultado;
     private javax.swing.JTextField Url;
     // End of variables declaration//GEN-END:variables
 }
